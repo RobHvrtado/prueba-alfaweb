@@ -1,4 +1,4 @@
-export const moduleSesion = {
+export const moduloSesion = {
     namedspaced: true,
     state: {
         usuario: null,
@@ -12,7 +12,7 @@ export const moduleSesion = {
 
     actions: {
         configurarUsuario(context, usuario) {
-            context.commit("SET_USUARIO", usuario);
+            context.commit("SET_USER", usuario);
         },
     },
 

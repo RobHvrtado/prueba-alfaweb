@@ -14,8 +14,8 @@
 
       <v-spacer></v-spacer>
 
-      <SignIn />
-      <SignOut />
+      <SignIn v-show="!$store.state.sesion.urusario" />
+      <SignOut v-show="$store.state.sesion.urusario" />
     </v-app-bar>
 
      </v-container>

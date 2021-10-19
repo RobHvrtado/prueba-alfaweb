@@ -38,7 +38,7 @@ export default {
 
   methods: {
     async handleFormSubmit() {
-      if (this.$refs.userForm.validate()) {
+      if (this.$refs.userForm.validate() ) {
 
         try {
          await Firebase.auth().
@@ -46,7 +46,7 @@ export default {
          (this.form.email, this.form.password
          );
 
-         this.store.dispatch(
+         this.$store.dispatch(
            "sesion/configurarUsuario", 
            Firebase.auth().currentUser);
          
